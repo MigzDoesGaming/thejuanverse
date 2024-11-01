@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.35/build/spline-viewer.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,800;1,800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital@0;1&display=swap');
+    </style>
+</head>
+<body>
+    <nav class="jost-navbar">
+        <a href="#home" class="home-link"></a>
+        <ul class="nav-right">
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div class="spline-embed">
+                <spline-viewer url="https://prod.spline.design/KQnpyPaF9uT24uoS/scene.splinecode"></spline-viewer>
+            </div>
+        </section>
+
+        <section id="about"> 
+            <h2 class="upcoming-projects">About Me</h2> 
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>Juan Miguel Sanchez</h3>
+                    <p>I am a 4th-year IT student at the FEU Institute of Technology, specializing in Digital Arts. With expertise in web development and 3D modeling, I am committed to creating visually compelling and user-friendly digital experiences.</p>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="projects"> 
+            <h2 class="upcoming-projects">Upcoming Projects</h2> 
+            <div class="project-cards">
+                <div class="project-card">
+                    <h3>Portfolio</h3>
+                    <p>A brief showcase of my artistic endeavors, focusing on my unique creations in both 2D art and 3D modeling.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Working 3D Scientific Calculator</h3>
+                    <p>The goal is to design and develop an interactive 3D scientific calculator that can perform various mathematical functions.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Discord/Messenger Website</h3>
+                    <p>This project aims to provide a user-friendly messaging experience while implementing modern design principles.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio">
+            <h2>My Work</h2>
+            <p>Some of my recent projects...</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Get in touch with me...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
