@@ -155,6 +155,17 @@ h1, h2 {
         opacity: 0;
         transform: translateX(-50px); /* Move left */
     }
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to bottom, #FFD400 66.6%, #FF0099 33.4%);
+    z-index: -1; /* Behind all content */
+}
     to {
         opacity: 1;
         transform: translateX(0); /* Move to original position */
@@ -164,4 +175,5 @@ h1, h2 {
 /* Class to apply animation */
 .fade-in-left {
     animation: fadeInLeft 0.5s ease forwards; /* Animation duration and easing */
+
 }
