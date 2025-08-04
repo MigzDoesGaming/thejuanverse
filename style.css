@@ -1,10 +1,11 @@
+/* === Reset and Base === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* === Body Styling === */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -13,7 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Navigation Bar Styling */
+/* === Navigation Bar === */
 .jost-navbar {
     font-family: "Jost", sans-serif;
     font-weight: 800;
@@ -42,7 +43,7 @@ body {
 
 .nav-right li {
     margin-left: 50px;
-    margin-top: 30px; 
+    margin-top: 30px;
     margin-right: 50px;
 }
 
@@ -56,29 +57,28 @@ body {
     color: #5a835d;
 }
 
-/* Main Content Styling */
+/* === Main Content === */
 main {
     padding-top: 70px; /* Corrected offset for fixed nav */
 }
 
-/* Spline Embed Container */
+/* === Spline Viewer Embed === */
 .spline-embed {
     width: 100%;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-top: -70px; /* Move the spline up */
+    margin-top: -70px;
 }
 
-/* Spline Viewer */
 .spline-embed spline-viewer {
     width: 100%;
     height: 100%;
 }
 
-/* Sections Styling */
+/* === Section Styling === */
 section {
     margin: 40px 20px;
 }
@@ -88,74 +88,80 @@ h1, h2 {
     font-weight: bold;
 }
 
-/* Center Upcoming Projects Heading */
+/* === Heading: Upcoming Projects / About Me === */
 .upcoming-projects {
     font-family: "Jost", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 340; /* Adjust if necessary */
-    font-style: normal; /* Default */
-    text-align: center; /* Center the text */
-    margin: 20px 0; /* Adds spacing above and below */
-    font-size: 2em; 
+    font-weight: 340;
+    font-style: normal;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2em;
 }
 
-/* Project Cards Styling */
+/* === Project Cards Layout === */
 .project-cards {
     display: flex;
-    justify-content: space-between; /* Distributes space between cards */
-    margin-top: 20px; /* Space between heading and cards */
-    margin-left: 50px; /* Space between heading and cards */
-    margin-right: 50px; /* Space between heading and cards */
+    justify-content: space-between;
+    margin: 20px 50px 0 50px;
 }
 
 .project-card {
-    background-color: #fff; /* Background color for cards */
-    border: 1px solid #ccc; /* Border for cards */
-    border-radius: 8px; /* Rounded corners */
-    padding: 20px; /* Inner padding */
-    width: calc(25.33% - 25px); /* Adjust width and maintain spacing */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
-    transition: transform 0.3s; /* Smooth scaling on hover */
-    opacity: 0; /* Start invisible */
-    transform: translateY(20px); /* Start slightly lower */
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out; /* Animate both properties */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(25.33% - 25px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.project-card p{
-
+.project-card p {
     text-align: justify;
     margin: 0;
-
-
-
 }
+
 .project-card.visible {
-    opacity: 1; /* Fully visible */
-    transform: translateY(0); /* Move to original position */
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+    transform: scale(1.05);
 }
 
-/* Media Query for Responsive Design */
+/* === Responsive for Mobile === */
 @media (max-width: 768px) {
     .project-cards {
-        flex-direction: column; /* Stack cards on smaller screens */
+        flex-direction: column;
     }
 
     .project-card {
-        width: 100%; /* Full width on smaller screens */
-        margin-bottom: 20px; /* Space between cards */
+        width: 100%;
+        margin-bottom: 20px;
     }
 }
 
+/* === Fade-in Animation === */
 @keyframes fadeInLeft {
     from {
         opacity: 0;
-        transform: translateX(-50px); /* Move left */
+        transform: translateX(-50px);
     }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
+.fade-in-left {
+    animation: fadeInLeft 0.5s ease forwards;
+}
+
+/* === Wall and Floor Background === */
 body::before {
     content: "";
     position: fixed;
@@ -164,16 +170,5 @@ body::before {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to bottom, #FFD400 66.6%, #FF0099 33.4%);
-    z-index: -1; /* Behind all content */
-}
-    to {
-        opacity: 1;
-        transform: translateX(0); /* Move to original position */
-    }
-}
-
-/* Class to apply animation */
-.fade-in-left {
-    animation: fadeInLeft 0.5s ease forwards; /* Animation duration and easing */
-
+    z-index: -1;
 }
